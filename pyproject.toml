@@ -18,4 +18,4 @@ dependencies = [
 Home = "https://github.com/0x29a/cli_template"
 
 [project.scripts]
-flit = "cli_template:main"
+cli_template = "cli_template.main:cli"
