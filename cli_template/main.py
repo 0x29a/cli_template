@@ -1,8 +1,29 @@
 """Main module."""
+import click
 
 
-def do_something():
+@click.group()
+def cli():
     """
-    Foo.
+    Main group.
     """
-    return True
+
+
+@click.command()
+def initdb():
+    """
+    Example command.
+    """
+    click.echo("Initialized the database")
+
+
+@click.command()
+def dropdb():
+    """
+    Another example command.
+    """
+    click.echo("Dropped the database")
+
+
+cli.add_command(initdb)
+cli.add_command(dropdb)
